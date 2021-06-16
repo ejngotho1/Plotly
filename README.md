@@ -1,100 +1,35 @@
 # Plotly
 
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@ejngotho1 
-emmanuelmartinezs
-/
-Plotly
-1
-0
-0
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
- 1 branch
- 0 tags
-Latest commit
-@emmanuelmartinezs
-emmanuelmartinezs update
-a19df31
-on Jan 15
-Git stats
- 32 commits
-Files
-Type
-Name
-Latest commit message
-Commit time
-JS
-update
-4 months ago
-Old_Files_Module
-update
-4 months ago
-Resources
-update
-4 months ago
-static
-update
-4 months ago
-BellyButton_bar_chart_starter_code.js
-update
-4 months ago
-BellyButton_bubble_chart_starter_code.js
-update
-4 months ago
-BellyButton_gauge_starter_code.js
-update
-4 months ago
-README.md
-update
-4 months ago
-index.html
-update
-4 months ago
-README.md
 Plotly (Belly Button Biodiversity Dashboard)
 Overview of Project
 Roza has a partially completed dashboard that she needs to finish. She has a completed panel for demographic information and now needs to visualize the bacterial data for each volunteer. Specifically, her volunteers should be able to identify the top 10 bacterial species in their belly buttons. That way, if Improbable Beef identifies a species as a candidate to manufacture synthetic beef, Roza's volunteers will be able to identify whether that species is found in their navel.
 
 Deliverable 1: Create a Horizontal Bar Chart
+
 Deliverable 2: Create a Bubble Chart
+
 Deliverable 3: Create a Gauge Chart
+
 Deliverable 4: Customize the Dashboard
+
 Deliverable 5: A written report on the Belly Button Biodiversity Dashboard analysis README.md.
-Resources and Before Start Notes:
+
+### Resources and Before Start Notes:
 Data Source: BellyButton_bar_chart_starter_code.js, BellyButton_bubble_chart_starter_code.js, BellyButton_bubble_chart_starter_code.js and index.html
 Data Tools: ECMAScript, JavaScript, JSON and IO (Web Server)
 Software: ES6+, ECMAScript and Visual Studio Code 1.50.0
 For more information, read the Documentation on Plotly.js Basic Charts. And for more information, read the CORS Documentation.
 
-Overview of ES6+
+### Overview of ES6+
 ECMAScript, also referred to as "ES," is a scripting language designed to help standardize JavaScript. This means that ES provides guidelines and rules for JavaScript to follow, such as how a function should be created to run correctly, also known as the proper syntax.
 
-Because ES has provided standardization for JavaScript, it also brings updates to the language. There are updates to every major coding language that fix bugs, update code, and provide overall quality of life improvements for the developers. ES6 is no exception!
-
-There have been many updates to ES over the years, though the sixth update was a major one. You'll probably see "ES6+" mentioned out in the wild pretty often; this is a reference to the "big" update (ES6) as well as the later ones. It's also commonly known as "ES2015" or "ECMAScript 2015." (It was such an important update that it's even known by its year!) There are quite a few different ways to reference this language, but we'll be referring to it as ES6, JavaScript, or JS in this project.
-
-Benefits of the ES6 Update
+### Benefits of the ES6 Update
 We've briefly mentioned that the ES6 update was useful, but let's talk a bit more about why it was such a big deal.
-
-Imagine two laptops, one old and one new, side by side. They're similar enough: they're close in size and shape and can complete many of the same tasks, but the newer laptop has an edge. It is faster and can perform tasks with greater efficiency than the older model.
 
 JavaScript after the ES6 update is like the newer computer. This update included many updates to the syntax, which streamlined the code and made it easier to both read and write. Additional, quality of life improvements were implemented as well, such as adding Python-like generators and for...of loops. Even functions were updated and streamlined!
 
-Functional JavaScript
+### Functional JavaScript
+
 The map() Method
 The map() method in JavaScript applies a transformation to each element in an array. Like a for loop, it can perform an operation to every element of an array.
 
@@ -108,7 +43,9 @@ console.log(doubled);
 In this code, an array named numbers contains five integers:var numbers = [1,2,3,4,5];. Let's break down the rest of the code in more detail:
 
 The numbers array calls the map() method.
+
 Inside the map() method, there is another function. This function is anonymous, meaning that the function does not have a name. When map() is called, it in turn calls this anonymous function.
+
 The anonymous function takes a parameter, named num, and returns the number multiplied by 2. Its sole task is to perform this single action.
 For every element in the array, the map() method calls the anonymous function, which doubles the value of the element.
 The map() method returns an array of doubled values, which is assigned the variable doubled.
@@ -116,11 +53,10 @@ Here, the map() function becomes a method of the numbers array. It then takes in
 
 Behind the scenes, an iterative process similar to a for loop takes place. The anonymous function takes in each integer of the numbers array and doubles it. Finally, the variable doubled is an array of integers whose values are twice their original values.
 
-Try running the code in your browser console and view the results for doubled. You should see the following:
 
-name-of-you-image
 
 The filter() Method
+
 Another functional programming technique is the filter() method. Like the map() method, it accepts another function as its parameter. Like map(), filter() performs an operation on every element in the original array. Unlike map(), however, filter() does not necessarily return an array whose length is the same as the original array.
 
 Let's see what this means in an example. Run the following code in your console. What does larger return?
@@ -142,7 +78,6 @@ The filter() method operates on each element of the numbers array. So how does i
 
 The map() method transforms every element of the original array, and so the size of the transformed array is the same as that of the original array.
 
-The filter() method, on the other hand, returns an array of values that meet certain criteria. Values in the original array that do not fulfill the condition are filtered out. In this case, specifically, the anonymous function called by filter() returns true if an argument is larger than 1, and false if it does not. The filter() method runs the anonymous function on every element of the original numbers array. Only numbers that are larger than 1 are returned: [2,3,4,5]. So whereas applying map() to the numbers array would have returned an array with five elements, applying this specific filter returned an array of only four elements.
 
 The Arrow Functions
 Let's do a quick review of arrow functions. An arrow function in JavaScript is syntactic sugar. That is, an arrow function does the same thing as a standard JavaScript function, but it streamlines the syntax used to accomplish the same task.
@@ -175,9 +110,6 @@ Create a Horizontal Bar Chart
 Deliverable Requirements:
 Using your knowledge of JavaScript, Plotly, and D3.js, create a horizontal bar chart to display the top 10 bacterial species (OTUs) when an individual’s ID is selected from the dropdown menu on the webpage. The horizontal bar chart will display the sample_values as the values, the otu_ids as the labels, and the otu_labels as the hover text for the bars on the chart.
 
-Your bar chart should look like the following image:
-
-name-of-you-image
 
 Code is written to create the arrays when a sample is selected from the dropdown menu.
 Code is written to create the trace object in the buildCharts() function, and it contains the following:
@@ -534,6 +466,7 @@ Your gauge chart should look similar to the following image:
 name-of-you-image
 
 The code to build the gauge chart does the following:
+
 Creates a title for the chart.
 Creates the ranges for the gauge in increments of two, with a different color for each increment.
 Adds the washing frequency value on the gauge chart.
