@@ -46,11 +46,6 @@ The numbers array calls the map() method.
 
 Inside the map() method, there is another function. This function is anonymous, meaning that the function does not have a name. When map() is called, it in turn calls this anonymous function.
 
-The anonymous function takes a parameter, named num, and returns the number multiplied by 2. Its sole task is to perform this single action.
-For every element in the array, the map() method calls the anonymous function, which doubles the value of the element.
-The map() method returns an array of doubled values, which is assigned the variable doubled.
-Here, the map() function becomes a method of the numbers array. It then takes in an anonymous function whose sole task is to double the value of num, its argument.
-
 Behind the scenes, an iterative process similar to a for loop takes place. The anonymous function takes in each integer of the numbers array and doubles it. Finally, the variable doubled is an array of integers whose values are twice their original values.
 
 
@@ -103,34 +98,40 @@ var integers = [0,1,2,3,4,5];
 var slice1 = integers.slice(0,2);
 In this example, the slice() method returns the first two elements of the integer array: [0,1]. The first argument is the position of where to begin the selection. Here, it is at index position 0. The next argument, 2, denotes the position of the array where the slicing ceases. In other words, the slice() method begins selecting the array at index position 0, and stops right before reaching index position 2. So here, it returns elements at index positions 0 and 1, but not 2.
 
-Let's move on!
-
 Deliverable 1:
 Create a Horizontal Bar Chart
 Deliverable Requirements:
 Using your knowledge of JavaScript, Plotly, and D3.js, create a horizontal bar chart to display the top 10 bacterial species (OTUs) when an individual’s ID is selected from the dropdown menu on the webpage. The horizontal bar chart will display the sample_values as the values, the otu_ids as the labels, and the otu_labels as the hover text for the bars on the chart.
 
+![image](https://user-images.githubusercontent.com/57301554/122163203-630aa880-ce3a-11eb-8aa2-6521c4461dfd.png)
 
 Code is written to create the arrays when a sample is selected from the dropdown menu.
+
 Code is written to create the trace object in the buildCharts() function, and it contains the following:
+
 The y values are the otu_ids in descending order.
+
 The x values are the sample_values in descending order
+
 The hover text is the otu_labels in descending order.
+
 ​Code is written to create the layout array in the buildCharts() function that creates a title for the chart.
+
 When the dashboard is first opened in a browser, ID 940’s data should be displayed in the dashboard, and the bar chart has the following:
+
 The top 10 sample_values are sorted in descending order
+
 The top 10 sample_values as values
+
 The otu_ids as the labels
+
 Results with detail analysis:
+
 Code is written to create the arrays when a sample is selected from the dropdown menu.
+
 Image with JavaScript & HTML Code below.
 
 Code and Image
-
-// COLUMBIA ENGINEERING 
-// By Emmanuel Martinez
-// Module 12
-
 
 // DELIVERABLE 1: Create a Horizontal Bar Chart
 
@@ -188,7 +189,9 @@ function buildMetadata(sample) {
 
   });
 }
-name-of-you-image
+
+![image](https://user-images.githubusercontent.com/57301554/122163313-99482800-ce3a-11eb-9af3-5741ec4c3292.png)
+
 
 Code is written to create the trace object in the buildCharts() function, and it contains the following:
 The y values are the otu_ids in descending order.
@@ -257,7 +260,9 @@ name-of-you-image
 ​Code is written to create the layout array in the buildCharts() function that creates a title for the chart.
 Image with JavaScript & HTML Code below.
 
-Code and Image
+
+![image](https://user-images.githubusercontent.com/57301554/122163353-abc26180-ce3a-11eb-8312-ca68a54d69a3.png)
+
 
     // 9. Create the layout for the bar chart. 
     var barLayout = {
@@ -273,11 +278,6 @@ The top 10 sample_values as values
 The otu_ids as the labels
 Image with JavaScript & HTML Code below.
 
-Code and Image
-
-// COLUMBIA ENGINEERING 
-// By Emmanuel Martinez
-// Module 12
 
 
 // DELIVERABLE 1: Create a Horizontal Bar Chart
@@ -378,21 +378,24 @@ function buildCharts(sample) {
     };
     // 10. Use Plotly to plot the data with the layout. 
     Plotly.newPlot("bar", barData, barLayout);
-name-of-your-image
+
+![image](https://user-images.githubusercontent.com/57301554/122163480-e4fad180-ce3a-11eb-85f1-deb3651b1eea.png)
+
+![image](https://user-images.githubusercontent.com/57301554/122163512-f17f2a00-ce3a-11eb-8810-455020fecfe9.png)
 
 Deliverable 2:
 Create a Bubble Chart
 Deliverable Requirements:
 Using your knowledge of JavaScript, Plotly, and D3.js, create a bubble chart that will display the following when an individual’s ID is selected from the dropdown menu webpage:
 
-The otu_ids as the x-axis values.
-The sample_values as the y-axis values.
-The sample_values as the marker size.
-The otu_ids as the marker colors.
-The otu_labels as the hover-text values.
-Your bubble chart should look like the following image:
+- The otu_ids as the x-axis values.
+- The sample_values as the y-axis values.
+- The sample_values as the marker size.
+- The otu_ids as the marker colors.
+- The otu_labels as the hover-text values.
+- Your bubble chart should look like the following image:
 
-name-of-you-image
+![image](https://user-images.githubusercontent.com/57301554/122163626-12e01600-ce3b-11eb-80be-3254d6a0a03f.png)
 
 The code for the trace object in the buildCharts(); function does the following:
 Sets the otu_ids as the x-axis values
@@ -445,16 +448,20 @@ Code and Image
         automargin: true,
         hovermode: "closest"
     };
-name-of-your-image
+
 
 ​When the dashboard is first opened in a browser, ID 940’s data should be displayed in the dashboard. All three charts should also be working according to their requirements when a sample is selected from the dropdown menu.
 Image with JavaScript & HTML Code below.
 
-Code and Image
+
 
     // 3. Use Plotly to plot the data with the layout.
     Plotly.newPlot("bubble", bubbleData, bubbleLayout)
-name-of-your-image
+
+![image](https://user-images.githubusercontent.com/57301554/122163807-63577380-ce3b-11eb-9836-2fe3afcfad9b.png)
+
+![image](https://user-images.githubusercontent.com/57301554/122163840-70746280-ce3b-11eb-9e41-5aa40b3fb9a8.png)
+
 
 Deliverable 3:
 Create a Gauge Chart
@@ -463,7 +470,7 @@ Using your knowledge of JavaScript, Plotly, and D3.js, create a gauge chart that
 
 Your gauge chart should look similar to the following image:
 
-name-of-you-image
+![image](https://user-images.githubusercontent.com/57301554/122163875-7cf8bb00-ce3b-11eb-948a-e362bd8ee7f1.png)
 
 The code to build the gauge chart does the following:
 
@@ -475,16 +482,17 @@ The gauge is added to the dashboard.
 The gauge fits in the margin of the <div> element.
 When the webpage loads, the bar and bubble chart are working according to the requirements in Deliverable 1 and 2, respectively, and the gauge chart is working according to the requirements listed for this Deliverable
 Results with detail analysis:
+    
 The code to build the gauge chart does the following:
-Creates a title for the chart.
-Creates the ranges for the gauge in increments of two, with a different color for each increment.
-Adds the washing frequency value on the gauge chart.
-The indicator shows the level for the washing frequency on the gauge.
-The gauge is added to the dashboard.
-The gauge fits in the margin of the <div> element.
-Image with JavaScript & HTML Code below.
+    
+-Creates a title for the chart.
+-Creates the ranges for the gauge in increments of two, with a different color for each increment.
+-Adds the washing frequency value on the gauge chart.
+-The indicator shows the level for the washing frequency on the gauge.
+-The gauge is added to the dashboard.
+-The gauge fits in the margin of the <div> element.
+-Image with JavaScript & HTML Code below.
 
-Code and Image
 
 // 1. Create a variable that filters the metadata array for the object with the desired sample number.
     var metadata = data.metadata;
@@ -532,9 +540,12 @@ HTML Code
       <div class="col-md-5">
         <div id="gauge"></div>
       </div>
-name-of-your-image
 
-name-of-you-image
+    ![image](https://user-images.githubusercontent.com/57301554/122164032-baf5df00-ce3b-11eb-89a1-efe8b0c9b1d5.png)
+
+    ![image](https://user-images.githubusercontent.com/57301554/122164070-c8ab6480-ce3b-11eb-9e30-7115f4569368.png)
+
+    
 
 When the webpage loads, the bar and bubble chart are working according to the requirements in Deliverable 1 and 2, respectively, and the gauge chart is working according to the requirements listed for this Deliverable
 Image with JavaScript & HTML Code below.
@@ -598,7 +609,10 @@ Code and Image
 </body>
 
 </html>
-name-of-your-image
+
+    
+    ![image](https://user-images.githubusercontent.com/57301554/122164120-e7116000-ce3b-11eb-9446-8bfc21f575f6.png)
+
 
 Deliverable 4:
 Customize the Dashboard
@@ -628,8 +642,6 @@ Change the layout of the page.
 Add a navigation bar that allows you to select the bar or bubble chart on the page.
 Image with JavaScript & HTML Code below.
 
-Code and Image
-
 body {
 
     color: #000000;
@@ -646,54 +658,23 @@ body {
     background-size: 100% 100%;
     text-align: center;
   }
-name-of-you-image
+
+    ![image](https://user-images.githubusercontent.com/57301554/122164171-fd1f2080-ce3b-11eb-88c2-697930475df7.png)
+
 
 When the dashboard is first opened in a browser, ID 940’s data should be displayed in the dashboard, and the three charts should be working according to their requirements.
 Image with JavaScript & HTML Code below.
 
-name-of-your-image
+![image](https://user-images.githubusercontent.com/57301554/122164208-0b6d3c80-ce3c-11eb-84c3-bfc8d290480b.png)
 
 ​​When a sample is selected, the dashboard should display the data in the panel and all three charts according to their requirements.
 Page Fully Responsive
 
-name-of-your-image
+![image](https://user-images.githubusercontent.com/57301554/122164259-1e800c80-ce3c-11eb-9e31-e56656e5c3f9.png)
 
 Please visit the Site below to intercat with the Data!
 
 Belly Button Biodiversity Dashboard.
 
-JavaScript, Bootstrap, and Plotly (Belly Button Biodiversity Dashboard) Analysis Completed by Emmanuel Martinez
-About
-IO Page available!
 
-djngotho1.github.io/plotly/
-Resources
- Readme
-Releases
-No releases published
-Packages
-No packages published
-Environments 1
- github-pages Active
-Languages
-JavaScript
-86.8%
- 
-HTML
-12.8%
- 
-CSS
-0.4%
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete
+
