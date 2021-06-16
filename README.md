@@ -131,7 +131,6 @@ Code is written to create the arrays when a sample is selected from the dropdown
 
 Image with JavaScript & HTML Code below.
 
-Code and Image
 
 // DELIVERABLE 1: Create a Horizontal Bar Chart
 
@@ -199,8 +198,6 @@ The x values are the sample_values in descending order
 The hover text is the otu_labels in descending order.
 Image with JavaScript & HTML Code below.
 
-Code and Image
-
 // 1. Create the buildCharts function.
 function buildCharts(sample) {
   // 2. Use d3.json to load and retrieve the samples.json file 
@@ -255,7 +252,6 @@ function buildCharts(sample) {
          colorscale: "Portland" 
        }
     }];
-name-of-you-image
 
 ​Code is written to create the layout array in the buildCharts() function that creates a title for the chart.
 Image with JavaScript & HTML Code below.
@@ -417,7 +413,6 @@ Sets the sample_values as the marker size
 Sets the otu_ids as the marker colors
 Image with JavaScript & HTML Code below.
 
-Code and Image
 
 // 1. Create the trace for the bubble chart.
     var bubbleData = [{
@@ -431,7 +426,6 @@ Code and Image
          colorscale: "Portland" 
        }
     }];
-name-of-your-image
 
 The code for the layout in the buildCharts(); function does the following:
 Creates a title
@@ -439,7 +433,6 @@ Creates a label for the x-axis
 The text for a bubble is shown when hovered over.
 Image with JavaScript & HTML Code below.
 
-Code and Image
 
 // 2. Create the layout for the bubble chart.
     var bubbleLayout = {
@@ -549,8 +542,6 @@ HTML Code
 
 When the webpage loads, the bar and bubble chart are working according to the requirements in Deliverable 1 and 2, respectively, and the gauge chart is working according to the requirements listed for this Deliverable
 Image with JavaScript & HTML Code below.
-
-Code and Image
 
 <!DOCTYPE html>
 <html lang="en">
